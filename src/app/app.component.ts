@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AluraCurso2';
+  destiny: number;
+  value: number;
+  transferencia: any;
+
+  transfer($event){
+    console.log($event);
+    this.transferencia = $event;
+    }
 }
