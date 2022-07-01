@@ -1,3 +1,4 @@
+import { TransferService } from './services/transfer.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,12 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AluraCurso2';
-  destiny: number;
-  value: number;
-  transferencia: any;
+
+  constructor(private service: TransferService){ }
 
   transfer($event){
-    console.log($event);
-    this.transferencia = $event;
+    this.service.transfer($event);
     }
 }
