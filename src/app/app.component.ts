@@ -10,8 +10,4 @@ export class AppComponent {
   title = 'AluraCurso2';
 
   constructor(private service: TransferService){ }
-
-  transfer($event){
-    this.service.transfer($event);
-    }
 }

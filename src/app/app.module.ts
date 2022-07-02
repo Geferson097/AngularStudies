@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ExtratoComponent } from './extrato/extrato.component';
+import { ExtractComponent } from './extract/extract.component';
 import { NewTransferComponent } from './new.transfer/new.transfer.component';
 import localePT from '@angular/common/locales/pt';
 import { HttpClientModule } from '@angular/common/http';
+import {AppRoutingModule} from './app.routing.module';
 
 registerLocaleData(localePT, 'pt');
 
@@ -15,12 +16,13 @@ registerLocaleData(localePT, 'pt');
   declarations: [
     AppComponent,
     NewTransferComponent,
-    ExtratoComponent
+    ExtractComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pt-BR'},

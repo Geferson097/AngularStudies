@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './extract.component.html',
   styleUrls: ['./extract.component.scss']
 })
-export class extractComponent implements OnInit {
+export class ExtractComponent implements OnInit {
 
   transfers: any= [];
 

@@ -24,10 +24,11 @@ constructor(private httpClient: HttpClient ) {
   return this.httpClient.get<Transfer[]>(this.url);
  }
 
- transfer(transfer: any){
+ transfer(transfer: Transfer): Observable <Transfer>{
   this.improveData(transfer);
-  this.transferList.push(transfer);
-  }
+  return this.httpClient.post<Transfer>(this.url, transfer);
+}
+
 
   private improveData(transfer: any){
 

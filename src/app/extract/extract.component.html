@@ -1,18 +1,20 @@
-<table class="tabela">
-  <thead class="tabela__cabecalho">
+<section class="container">
+  <h2 class="titulo">Transfers</h2>
+  <table class="tabela">
+    <thead class="tabela__cabecalho">
     <th class ="tabela__cabecalho__conteudo">Date</th>
     <th class ="tabela__cabecalho__conteudo">Value</th>
     <th class ="tabela__cabecalho__conteudo">Destiny</th>
-  </thead>
-  <tbody *ngIf="transfers?.length > 0; else emptyList">
+    </thead>
+    <tbody *ngIf="transfers?.length > 0; else emptyList">
     <tr class="tabela__linha" *ngFor="let transfer of transfers" >
       <td class ="tabela__conteudo">{{transfer.date | date: "short"}}</td>
       <td class ="tabela__conteudo">{{transfer.value | currency}}</td>
       <td class ="tabela__conteudo">{{transfer.destiny}}</td>
     </tr>
-  </tbody>
-</table>
-<ng-template #emptyList>
-  <p> No transfers registered </p>
-</ng-template>
-
+    </tbody>
+  </table>
+  <ng-template #emptyList>
+    <p> No transfers registered </p>
+  </ng-template>
+</section>
