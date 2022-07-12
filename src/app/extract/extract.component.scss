@@ -29,6 +29,19 @@
       }
     }
   }
+  .botao {
+    text-align: center;
+    background-color: var(--primary);
+    color: black;
+    display: block;
+    flex: 1;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 0.5em;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
 
   &__conteudo {
     padding: 10px;

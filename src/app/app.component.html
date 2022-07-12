@@ -1,13 +1,16 @@
 <header>
-  <mat-toolbar color="primary">
-
-
-  </mat-toolbar>
-
+  <app-initial></app-initial>
 </header>
-<main>
-
-  <a routerLink="extract" routerLinkActive="active"> Bytebank </a>
-  <a routerLink="new-transfer" routerLinkActive="active"> New Transfer </a>
-  <router-outlet></router-outlet>
-</main>
+<body>
+<mat-toolbar>
+  <section>
+    <div>
+      <button class="botao" type="submit" routerLink="extract" routerLinkActive="active"> Extract</button>
+    </div>
+    <div>
+      <button class="botao" type="submit" routerLink="new-transfer" routerLinkActive="active"> New Transfer</button>
+    </div>
+  </section>
+</mat-toolbar>
+<router-outlet></router-outlet>
+</body>
